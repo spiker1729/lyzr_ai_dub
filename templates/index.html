@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dub</title>
+    
+    <style>
+        
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #fad0c4 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input, select {
+            margin-bottom: 10px;
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            background: #ff9a9e;
+            border: none;
+            padding: 10px;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+            width: auto;
+        }
+
+        input[type="submit"]:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AI Dub</h1>
+        <form id="dubbing-form" action="/process" method="post">
+            <label for="youtube_url">YouTube URL:</label>
+            <input type="text" id="youtube_url" name="youtube_url" required><br><br>
+
+            <label for="target_language">Target Language:</label>
+            <select id="target_language" name="target_language" required>
+                <option value="ml">Malayalam</option>
+                <option value="te">Telugu</option>
+                <option value="ta">Tamil</option>
+                <option value="kn">Kannada</option>
+                <option value="gu">Gujarati</option>
+                <option value="mr">Marathi</option>
+                <option value="raj">Rajasthani</option>
+                <option value="pa">Punjabi</option>
+                <option value="bn">Bengali</option>
+                <option value="or">Odia</option>
+                <option value="as">Assamese</option>
+                <option value="hi">Hindi</option>
+                <option value="brx">Bodo</option>
+                <option value="mni">Manipuri</option>
+                <option value="en">English</option>
+            </select><br><br>
+
+            <input type="submit" value="Start Dubbing">
+        </form>
+    </div>
+</body>
+</html>
