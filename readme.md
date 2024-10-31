@@ -1,4 +1,4 @@
-# YouTube Video Translator
+# "AI dub" translate English videos to Indian langs
 
 This project is a Flask-based web application designed to translate YouTube videos from English to various Indian languages. It automates the process of fetching video transcripts, translating the text, generating audio from the translated text, and stitching the audio back into the video.
 
